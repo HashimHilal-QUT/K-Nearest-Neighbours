@@ -1,89 +1,87 @@
-# Convolutional Neural Networks (CNNs)
+# K-Nearest-Neighbours
 
-This repository features a comprehensive and practical implementation of Convolutional Neural Networks (CNNs), with examples and project challenges to help users gain real experience applying CNNs to image classification and pattern recognition tasks.
+This repository provides a comprehensive K-Nearest Neighbours (KNN) implementation, along with hands-on examples and project challenges to help users build real experience applying the algorithm in practical classification and regression scenarios.
 
 ## Projects Overview
 
-This repository contains 5 different CNN projects:
+This repository contains 3 different KNN projects:
 
-#### 1. Cats vs Dogs
+#### 1. Glass Classification (EXAMPLE)
 
-- **Notebook**: `Cats vs Dogs/Cats_vs_Dogs.ipynb`
-- **Content**: Binary image classification between cats and dogs
-- **Objective**: Build a CNN to distinguish between cats and dogs
-- **Status**: Ready for training
+- **Data**: `Glass Classification/Data/glass.csv`
+- **Notebook**: `Glass Classification/Glass Classification.ipynb`
+- **Content**: Glass type classification based on chemical composition
+- **Objective**: Predict glass type using chemical properties
+- **Status**: Ready for analysis
 
-#### 2. Concrete Cracks
+#### 2. Income Prediction
 
+- **Data**: `Income Prediction/Data/adult.csv`
+- **Notebook**: `Income Prediction/Adult Income Prediction - KNN.ipynb`
+- **Content**: Adult income dataset for binary classification
+- **Objective**: Predict whether income exceeds $50K based on demographic data
+- **Status**: Ready for analysis
 
-- **Notebook**: `Concrete Cracks/Concrete_Crack_Detection.ipynb`
-- **Content**: Crack detection in concrete structures
-- **Objective**: Classify images to detect structural damage
-- **Status**: Ready for training
+#### 3. Physical Activity
 
-#### 3. Vehicle Type
-
-- **Notebook**: `Vehicle Type/Vehicle_Type.ipynb`
-- **Content**: Vehicle classification from images
-- **Objective**: Classify different types of vehicles
-- **Status**: Ready for training
+- **Data**: Multiple CSV files in `Physical Activity/Data/UCI_HAR`
+- **Notebook**: `Physical Activity/Physical Activity.ipynb`
+- **Content**: Physical activity recognition from sensor data
+- **Objective**: In this project, we successfully built a multi-class k-Nearest Neighbours (KNN) classifier to recognize human activities from smartphone sensor data.
+- **Status**: Ready for analysis
 
 ## Getting Started
 
 1. Clone this repository
-2. Install required Python packages for CNN:
+2. Install required Python packages for KNN:
     
     ```shell
-    pip install tensorflow keras pandas numpy matplotlib seaborn jupyter opencv-python pillow
+    pip install pandas numpy scikit-learn matplotlib seaborn jupyter
     ```
     
 3. Choose a project folder and open the corresponding Jupyter notebook
-4. Follow the training process and experiment with different architectures
+4. Follow the analysis and experiment with different KNN parameters
 
-## CNN Concepts Covered
+## KNN Algorithm Concepts Covered
 
-- **Convolutional Layers**: Feature extraction with filters
-- **Pooling Layers**: Spatial dimensionality reduction
-- **Activation Functions**: ReLU, Sigmoid, Softmax
-- **Dropout**: Regularization technique
-- **Data Augmentation**: Improving model generalization
-- **Transfer Learning**: Using pre-trained models
-- **Model Architecture**: Building effective CNN structures
+- **Distance Metrics**: Euclidean, Manhattan, Minkowski distances
+- **K Selection**: Finding optimal number of neighbors
+- **Weighted KNN**: Distance-based weighting
+- **Cross-Validation**: Model evaluation and selection
+- **Feature Scaling**: Importance of normalization in KNN
 
 ## Requirements
 
 - Python 3.6 or higher
-- TensorFlow/Keras, pandas, numpy, matplotlib, seaborn, jupyter
-- OpenCV, Pillow for image processing
-- GPU support recommended for faster training
+- pandas, numpy, scikit-learn, matplotlib, seaborn, jupyter
 
 ## Project Structure
 
 ```
-Convolutional-Neural-Networks/
+K-Nearest-Neighbours/
 ├── README.md
-├── Cats vs Dogs/
-│   └── Cats_vs_Dogs.ipynb
-├── Concrete Cracks/
-│   └── Concrete_Crack_Detection.ipynb
-└── Vehicle Type/
-    └── Vehicle_Type.ipynb
+├── Glass Classification/
+│   ├── Glass Classification.ipynb
+│   └── Data/
+│       └── glass.csv
+├── Income Prediction/
+│   ├── Adult Income Prediction - KNN.ipynb
+│   └── Data/
+│       └── adult.csv
+└── Physical Activity/
+    ├── KNN – Human Activity Recognition.ipynb
+    └── Data/
+        ├── UCI_HAR
+        └── test/
+        └── train/
+        
 ```
 
 ## Tips for Success
 
-1. **Data Preprocessing**: Normalize images and handle class imbalance
-2. **Data Augmentation**: Use rotation, flipping, scaling for better generalization
-3. **Architecture Design**: Start simple, then add complexity
-4. **Regularization**: Use dropout and batch normalization
-5. **Transfer Learning**: Leverage pre-trained models like VGG, ResNet
-6. **Evaluation**: Use confusion matrices and classification reports
-7. **Hyperparameter Tuning**: Optimize learning rate, batch size, epochs
-
-## Advanced Topics
-
-- **Transfer Learning**: Fine-tuning pre-trained models
-- **Custom Architectures**: Building specialized CNN designs
-- **Object Detection**: Beyond classification
-- **Explainable AI**: Understanding what CNNs learn
-- **Model Optimization**: Reducing model size and inference time
+1. **Data Preprocessing**: Handle missing values and outliers
+2. **Feature Scaling**: Always normalize features for KNN
+3. **K Selection**: Use cross-validation to find optimal K
+4. **Distance Metrics**: Experiment with different distance measures
+5. **Evaluation**: Use appropriate metrics for classification/regression
+6. **Curse of Dimensionality**: Be aware of performance in high dimensions
